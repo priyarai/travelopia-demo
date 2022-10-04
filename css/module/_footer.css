@@ -1,0 +1,26 @@
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--tertiary-bg-color);
+  min-height: 80px;
+  color: var(--secondary-font-color);;
+}
+.footer--container{
+  min-height: 80px;
+}
+.footer--container a {
+  padding: 0 15px 0 0;
+} 
+.footer--right a {
+  opacity: 0.8;
+  line-height: 0.7rem; display: block;
+}
+ 
+.footer--right a:hover{ opacity: 1;}
+
+@media screen and (max-width:767px) {
+  .footer--center, .footer--right{ display: none;}
+  footer .d-flex {justify-content: center;flex-flow: column;  }
+  .footer--left {width: 100%; text-align: center; }
+}

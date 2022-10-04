@@ -1,0 +1,43 @@
+html, body,* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    background:var(--primary-bg-color);
+    font-family: var(--secondary-font-family);
+    font-size:var(--primary-font-size);
+    line-height:var(--primary-line-height);
+    color: var(--primary-color);
+  }
+  
+  *, *:before, *:after {
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+           -o-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+              box-sizing: border-box;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--secondary-font-color);
+    
+  }
+  img{
+    max-width: 100%;
+  }
+
+  h1{
+    font-family: var(--primary-font-family);
+  }
+
+  button{
+    background-color: none; border: none;
+  }

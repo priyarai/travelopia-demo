@@ -1,0 +1,105 @@
+header {
+  color: var(--secondary-font-color);
+  max-height: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.header--logo svg {
+  fill: #fff; padding-top: 10px;
+}
+a.header--logo {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* ===== Menu CSS===== */
+
+
+
+.animate-text a{
+  padding: 0 15px; position: relative;
+}
+
+.animate-text a::after,.animate-text a span{
+  transition: transform 0.4s ease, opacity 0.4s ease; 
+  -webkit-transition: transform 0.4s ease, opacity 0.4s ease; 
+  
+}
+.animate-text a span{
+  transform: translateY(0); -webkit-transform: translateY(0); opacity: 1; display: inline-block;
+}
+
+.animate-text a::after {
+  position: absolute;
+  content: attr(data-text);
+  transform: translateY(12px);
+  opacity: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  
+}
+
+
+.animate-text a:hover span {
+    transform: translateY(-12px); -webkit-transform: translateY(-12px);
+    opacity: 0;
+}
+.animate-text a:hover::after{
+    transform: translateY(0); -webkit-transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+/* ===Header Utilities=== */
+
+.nav--utilities img {
+  margin-top: 3px;
+  width: 18px;
+}
+
+.nav--utilities a {
+  padding: 0 6px;
+}
+
+
+.menu-close, .menu--toggle{ display: none;}
+
+.menu-toggle {display: none;}
+
+@media screen and (max-width:980px) {
+  .animate-text a { padding: 0 7px;}
+}
+
+@media screen and (max-width:800px) {
+  header{ z-index: 3;}
+  .menu--toggle{ display: block;}
+  nav .d-flex{ flex-flow: column;}
+  nav .align-items-center {align-items: start;margin-top: 10px;}
+  li.menu--items {display: block;width: 100%; padding: 3px 10px;  }
+  nav.animate-text {height: 100%;width: 0; position: fixed; top: 0;right: 0; background-color: #111;overflow-x: hidden;
+ padding-top: 60px;transition: 0.5s; }
+  nav.animate-text.active {width: 250px;}
+  .menu--toggle label{ position: absolute; width: 20px; height: 20px;}
+  .menu-toggle em {visibility: hidden;}
+.menu-toggle:before , .menu-toggle,.menu-toggle:after {width: 20px; height: 2px; background-color: #fff;}
+.menu-toggle { display: block;margin: 12px 0 0 8px; position: relative; transition: 0.5s;max-height: 40px;}
+.menu-toggle:before,.menu-toggle:after {content: "";position: absolute; left: 0;}
+.menu-toggle:before {top: -6px;}
+.menu-toggle:after {top: 6px;}
+
+.active.menu-toggle:after{transform:rotate(313deg) translate(2px,-6px)}
+.active.menu-toggle:before{ transform:rotate(220deg) translate(-2px,-7px)}
+  .active.menu-toggle{background-color:transparent;}
+
+}
+
+@media screen and (max-width:767px) {
+
+.nav--utilities a { display: none; }
+  .menu-toggle{ margin-top: 0;}
+
+}

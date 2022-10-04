@@ -1,0 +1,63 @@
+.modal-box {
+    position: fixed;
+    width: 100%;
+    background-color: #000;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    opacity: 0.9;
+    transform: scale(0);
+    
+}
+.active.modal-box {animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;}
+.active.modal-box  {
+    transform: scale(1);
+}
+.modal-container { width: 400px; background-color: #fff; margin: 20% auto 0; padding: 30px 20px; text-align: center;
+    border-radius: 5px; position: relative; opacity: 0;}
+
+
+.active .modal-container{ animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;}
+
+span.close {
+    position: absolute;
+    top: 8px;
+    right: 12px; cursor: pointer;
+}
+
+
+@keyframes fadeIn{
+    0% {
+        background: rgba(0, 0, 0, 0);
+       }
+
+   100% {
+       background: rgba(0, 0, 0, 0.9);
+   } 
+}
+
+@keyframes scaleUp{
+    0% {
+        transform: scale(0.8) translateY(1000px);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: scale(1) translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .modal-container{ margin-top: 50%;}
+}
+
+
+@media screen and (max-width:480px) {
+    .modal-container{ width: 300px;}
+}
+
+
+
+
+

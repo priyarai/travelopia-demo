@@ -1,0 +1,39 @@
+
+:root {
+    /* bg-color{{{ */
+    --primary-bg-color:rgb(134, 167, 208);
+    --secondary-bg-color:rgb(204, 80, 75);
+    --tertiary-bg-color:rgb(98 205 219);
+    --optional-bg-color:#666;
+    /* }}}bg-color */
+
+    
+/* font{{{ */
+
+--primary-font-color: #444444;
+--secondary-font-color: #FCFDFF;
+--strong-font-color:#000;
+--white-primary:#fff;
+
+--primary-font-family: 'Kurale', serif;
+--secondary-font-family: 'Rubik', serif;
+--primary-font-size: 1.2rem;
+/* }}}font */
+
+
+
+--primary-line-height: 1.5rem;
+
+
+--primary-border-color: #D3DDE5;
+--secondary-border-color: #a3a3a3;
+
+--footer-gray:#a3a3a3;
+
+--button-hover:rgb(122 163 213);
+--x-small-screen-size: 320px;
+--small-screen-size: 480px;
+--middle-screen-size: 980px;
+--large-screen-size: 1200px;
+--x-large-screen-size: 1960px;
+}
